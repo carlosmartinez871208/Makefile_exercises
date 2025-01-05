@@ -106,7 +106,6 @@ all:
 	@mkdir -p $(LOG_PATH)
 	@d=$$(date +%s); $(MAKE) "build" $(LOG_CMD) && echo "Building time: $$(date --utc --date=@$$(($$(date +%s)-d)) '+%H:%M:%S')" $(LOG_CMD)
 
-.ONESHELL: 
 build: start_build link_build
 
 start_build:
